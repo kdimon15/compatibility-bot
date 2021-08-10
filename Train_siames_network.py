@@ -15,7 +15,7 @@ from contextlib import contextmanager
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-df = pd.read_csv("/content/drive/MyDrive/Fashion_startup/Clothes_detection_siames/Siames/data/detected_labels.csv")
+df = pd.read_csv("data/detected_labels.csv")
 paths = df.path.values.tolist()
 lbs = df.label.values.tolist()
 dic = {}
