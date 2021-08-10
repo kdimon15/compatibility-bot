@@ -1,0 +1,8 @@
+opencv-python
+torch
+sklearn
+numpy
+albumentations
+efficientnet_pytorch
+tqdm
+pandas
