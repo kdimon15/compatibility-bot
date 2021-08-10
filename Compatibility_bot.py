@@ -45,9 +45,9 @@ transform = albu.Compose([
 ])
 classes = ['bag', 'belt', 'boots', 'footwear', 'outer', 'dress', 'sunglasses', 'pants', 'top', 'shorts', 'skirt', 'headwear', 'scarf/tie']
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='/content/drive/MyDrive/Fashion_startup/Detection/best.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='data/best.pt')
 net = SiamesNetwork()
-net.load_state_dict(torch.load("/content/drive/MyDrive/Fashion_startup/Siames/data/Efficient_siames.pth", map_location=device))
+net.load_state_dict(torch.load("Efficient_siames.pth", map_location=device))
 net.eval()
 net.to(device)
 
